@@ -1,0 +1,180 @@
+Install ReactJS Windows https://makandracards.com/reactjs-quick/52419-install-reactjs-windows
+
+1. Install NodeJS and NPM:
+
+git --version
+node --version
+npm --version
+
+
+2. Install React from terminal:
+npm install -g create-react-app
+
+create-react-app --version
+
+
+3. Create react project:
+create-react-app redux-contact-book
+
+4. Run project:
+cd myfirstreact
+npm start
+
+5. Install bootstrap  4.1.1
+npm i bootstrap@4.1.1
+npm install --save react-router-dom
+npm install axios
+
+
+6. Install vs code editor
+
+-install extension to make it code Easyest to build react application
+-simple code snippets
+-simple react snippets
+-Prettier code formater
+
+
+
+babel moder javascript compiler
+
+Define variable in js  like var let const
+
+state is data onject
+
+
+
+
+
+Topic: 
+-jax
+-rendering list
+-conditional rendering
+-handling events
+-binding event handler
+-updating the state
+-passing event argument
+array function
+
+-composing component
+-pass data to component
+-raise and handleevent 
+-Multiple component sync
+-functional component
+-lifecycle hooks
+
+
+-passing children
+-debuging react app -use React Developer Tool chrom extension
+-props vs state
+
+props include data that we give to component where as state includes data that we not call private to the compoent
+
+if( true && 'Hi') o/p hi
+if( true && 'Hi' && 1) o/p 1
+
+Vertual dom
+
+
+
+
+Node js JavaScript run time build on chrom v8 egine
+
+Note js is not a laguage or framwork
+
+written in c++
+
+Now we can run JavaScript code on server
+
+Js code ---> JavaScript Engine----> Machine code that is binary 0 or 1
+
+Internet Explorer We have chakra
+
+Spider monkey
+
+v8
+
+
+
+
+
+
+
+axios 
+
+/*
+ * Working method 1
+ */
+/*axios.interceptors.request.use(
+  function (config) {
+    config.headers.authorization = `Bearer ${pp_token}`;
+    return config;
+  },
+  function (error) {
+    return Promise.reject(error);
+  }
+);*/
+//const result = axios.get("http://127.0.0.1:8000/api/articles");
+/*
+ * Working method 1
+ */
+
+
+
+/*
+ * Working method 3
+ */
+const instance = axios.create({
+  baseURL: "http://127.0.0.1:8000/api",
+  headers: { Authorization: "Bearer " + pp_token },
+});
+
+const result = instance.get("/articles");
+/*
+ * Working method 3
+ */
+
+
+
+/*
+* Working method 2
+*/
+/*axios
+.get("http://127.0.0.1:8000/api/user", {
+  headers: {
+    authorization: "Bearer " + pp_token,
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  },
+})
+.then((response) => {
+  console.log("-------------1----------------");
+  console.log(response);
+  console.log("-----------------------------");
+})
+.catch((error) => {
+  console.log("------------2-----------------");
+  console.log(error);
+  console.log("-----------------------------");
+});*/
+
+/*
+* Working method 2
+*/
+
+result.then((result) => {
+  setUser(result.data);
+  console.log("-----------------------------");
+  console.log(result.data);
+  console.log("-----------------------------");
+});
+
+
+
+
+
+Redux Topic:
+
+-Install redux devtool chrom extension
+
+Install three packages: redux, react-redux, redux-devtools-extension
+-npm i redux react-redux redux-devtools-extension
